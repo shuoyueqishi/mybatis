@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+    <!--根据需要加入有关配置-->
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+
+
+    <!-- 引入外部配置文件 -->
+<!--    <properties resource="application.yml"></properties>-->
+
+    <!-- 为JAVA Bean起类别名 -->
+    <typeAliases >
+        <!-- 别名方式1，一个一个的配置 type中放置的是类的全路径，alias中放置的是类别名
+12         <typeAliase type="com.hw.xlt.model.Employee" alias="employee"/> -->
+        <!-- 别名方式2，自动扫描，将JAVA类的类名作为类的类别名 -->
+        <package name="com.hw.xlt.model"/>
+    </typeAliases>
+
+    <!-- 配置mybatis运行环境 -->
+<!--    <environments default="mybatis">-->
+<!--        <environment id="mybatis">-->
+<!--            &lt;!&ndash; type="JDBC" 代表使用JDBC的提交和回滚来管理事务 &ndash;&gt;-->
+<!--            <transactionManager type="JDBC" />-->
+
+<!--            &lt;!&ndash; mybatis提供了3种数据源类型，分别是：POOLED,UNPOOLED,JNDI &ndash;&gt;-->
+<!--            &lt;!&ndash; POOLED 表示支持JDBC数据源连接池 &ndash;&gt;-->
+<!--            &lt;!&ndash; UNPOOLED 表示不支持数据源连接池 &ndash;&gt;-->
+<!--            &lt;!&ndash; JNDI 表示支持外部数据源连接池 &ndash;&gt;-->
+<!--            <dataSource type="POOLED">-->
+<!--                <property name="driver" value="${jdbc.driver}" />-->
+<!--                <property name="url" value="${jdbc.url}" />-->
+<!--                <property name="username" value="${jdbc.username}" />-->
+<!--                <property name="password" value="${jdbc.password}" />-->
+<!--            </dataSource>-->
+<!--        </environment>-->
+<!--    </environments>-->
+
+    <!--定义映射器-->
+<!--    <mappers>-->
+<!--        <mapper resource="resources/mybatis/mapper/*Mapper.xml"/>-->
+<!--    </mappers>-->
+
+</configuration>
